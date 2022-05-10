@@ -7,7 +7,9 @@ import { Footer } from "../../organisms/Footer";
 const LayoutBox = styled(Box)(({ theme }) => {
   return css`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 30px;
     background: #f0e7dc;
     border: 1px solid blue;
   `;
@@ -35,10 +37,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       >
         <main
           style={{
-            border: "1px solid red",
             maxWidth: "758px",
             marginTop: "50px",
             width: "100%",
+            boxShadow:
+              "0px 3px 3px -2px rgba(0, 0, 0, 0.05), 0px 3px 4px rgba(0, 0, 0, 0.05), 0px 1px 8px rgba(0, 0, 0, 0.05)",
+            borderRadius: "10px",
           }}
         >
           {children}

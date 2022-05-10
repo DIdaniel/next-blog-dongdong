@@ -15,8 +15,11 @@ const NavBarStyle = styled(Box)(({ theme }) => {
 
     background: #f4ede5;
     padding: 10px;
-
     width: 100%;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.05),
+      0px 3px 4px rgba(0, 0, 0, 0.05), 0px 1px 8px rgba(0, 0, 0, 0.05);
+
+    z-index: 999;
   `;
 });
 
@@ -43,8 +46,22 @@ const NavBar = () => {
   return (
     <NavBarStyle>
       <InnerBox>
+        <NextLink href="https://stackblitz.com/">
+          <a target="_blank" style={{ textDecoration: "none" }}>
+            <Button>Stackblitz</Button>
+          </a>
+        </NextLink>
         <NextLink href="/">
-          <Button>Playgound</Button>
+          <a
+            style={{
+              color: "#000",
+              textDecoration: "none",
+              fontSize: "20px",
+              fontWeight: "bold",
+            }}
+          >
+            DDong's Playground
+          </a>
         </NextLink>
         <MenuStyle>
           <NextLink href="/">
