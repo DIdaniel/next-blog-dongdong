@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Box } from "@mui/material";
 
 const Blog = () => {
-  return <div>Blog section</div>;
+  useEffect(() => {}, []);
+
+  return (
+    <Box>
+      <Box>Blog Section</Box>
+      <Box>hello world</Box>
+    </Box>
+  );
 };
 
 export default Blog;
