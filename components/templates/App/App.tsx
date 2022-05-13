@@ -16,9 +16,9 @@ const App = () => {
         <Typography
           variant="h3"
           sx={{
+            mb: 3,
             fontWeight: "900",
             textAlign: "center",
-            mb: 3,
           }}
         >
           👋 Heyy, I&apos;m DONGDONG!

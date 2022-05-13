@@ -11,7 +11,6 @@ const LayoutBox = styled(Box)(({ theme }) => {
     height: 100%;
     padding-bottom: 30px;
     background: #f0e7dc;
-    border: 1px solid blue;
   `;
 });
 
@@ -27,7 +26,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <meta name="description" content="dong's blog" />
         <meta name="author" content="dong" />
         <meta name="author" content="dong's blog" />
-        <title>Donglog - Playground</title>
+        <title>Playground</title>
       </Head>
 
       <NavBar />

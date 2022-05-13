@@ -13,7 +13,7 @@ const NavBarStyle = styled(Box)(({ theme }) => {
     position: sticky;
     top: 0;
 
-    background: #f4ede5;
+    background: #f2cd0b;
     padding: 10px;
     width: 100%;
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.05),
@@ -47,8 +47,21 @@ const NavBar = () => {
     <NavBarStyle>
       <InnerBox>
         <NextLink href="https://stackblitz.com/">
-          <a target="_blank" style={{ textDecoration: "none" }}>
-            <Button>Stackblitz</Button>
+          <a
+            target="_blank"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <Button
+              sx={{
+                fontWeight: "bold",
+                fontSize: "20px",
+                fontFamily: "Londrina Shadow, cursive",
+              }}
+            >
+              Stackblitz
+            </Button>
           </a>
         </NextLink>
         <NextLink href="/">
@@ -58,6 +71,7 @@ const NavBar = () => {
               textDecoration: "none",
               fontSize: "20px",
               fontWeight: "bold",
+              fontFamily: "Londrina Shadow, cursive",
             }}
           >
             DDong's Playground
@@ -65,13 +79,37 @@ const NavBar = () => {
         </NextLink>
         <MenuStyle>
           <NextLink href="/">
-            <Button>Home</Button>
+            <Button
+              sx={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                fontFamily: "Londrina Shadow, cursive",
+              }}
+            >
+              Home
+            </Button>
           </NextLink>
           <NextLink href="/blog">
-            <Button>Blog</Button>
+            <Button
+              sx={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                fontFamily: "Londrina Shadow, cursive",
+              }}
+            >
+              Blog
+            </Button>
           </NextLink>
           <NextLink href="/about">
-            <Button>About</Button>
+            <Button
+              sx={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                fontFamily: "Londrina Shadow, cursive",
+              }}
+            >
+              About
+            </Button>
           </NextLink>
         </MenuStyle>
       </InnerBox>

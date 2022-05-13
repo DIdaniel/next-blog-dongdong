@@ -47,11 +47,12 @@ enum LoadingStatus {
 }
 
 type HomeProps = {
-  message: string;
+  //
 };
 
-const Home = ({ message }: HomeProps) => {
+const Home = (props: HomeProps) => {
   /** Property */
+  const { ...others } = props;
   const { handleSubmit, control, register } = useForm<UserEmail>();
 
   const [status, setStatus] = useState(EmailStatus.Normal);
@@ -72,9 +73,7 @@ const Home = ({ message }: HomeProps) => {
   return (
     <Box
       sx={{
-        background: "#f4ede5",
-        // background: "#fff",
-        // background: "#F2CD0B",
+        background: "#F2CD0B",
         width: "100%",
         height: "100%",
         padding: "24px",
@@ -140,50 +139,9 @@ const Home = ({ message }: HomeProps) => {
 
       <Divider />
 
-      {Array.from(Array(3)).map((item, index) => (
-        <Box key={index} sx={{ marginBottom: "40px" }}>
-          <Box
-            sx={{
-              width: "100%",
-              height: "300px",
-              overflow: "hidden",
-              border: "1px dashed green",
-              // background: "#cbae99",
-            }}
-          >
-            <img
-              src={message}
-              alt="images"
-              style={{
-                height: "100%",
-                width: "100%",
-                boxShadow:
-                  "0px 3px 3px -2px rgba(0, 0, 0, 0.05), 0px 3px 4px rgba(0, 0, 0, 0.05), 0px 1px 8px rgba(0, 0, 0, 0.05)",
-              }}
-            />
-          </Box>
-          <Typography>Helloworld</Typography>
-          <Divider sx={{ marginTop: "20px" }} />
-        </Box>
-      ))}
       <Footer />
     </Box>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch(`https://dog.ceo/api/breeds/image/random`);
-  const { message, status } = await response.json();
-
-  if (status !== "success") {
-    throw new Error("error");
-  }
-
-  return {
-    props: {
-      message,
-    },
-  };
 };
 
 export default Home;
